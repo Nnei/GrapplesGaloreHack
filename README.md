@@ -7,7 +7,6 @@ How Install:
 2. Start game. And press in game menu button "Exit"
 3. Download my source 
 4. Open visual studio and add refernses. (All in folder net6 and Il2CppAssemblies)
-![изображение](https://github.com/Nnei/GrapplesGaloreHack/assets/98836269/222e8d6b-7939-402b-87de-5a800a5f5420)
 - Assembly-CSharp.dll
 - IL2CppInterop.Runtime.dll
 - MelonLoader.dll
