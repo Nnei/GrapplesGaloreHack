@@ -9,16 +9,8 @@ namespace Main
     public class ClientMain : MelonMod
     {
         public static bool player_esp = false;
-        public static bool InfAmmo = false;
-        public static bool InfHealth = false;
-        public static bool KickAllPlayers = false;
-        public static bool StartMatch = false;
         public override void OnGUI()
         {
-            InfAmmo = GUI.Toggle(new Rect(10, 90, 120, 30), InfAmmo, "Inf Ammo");
-            InfHealth = GUI.Toggle(new Rect(10, 110, 120, 30), InfHealth, "Inf Health");
-            KickAllPlayers = GUI.Toggle(new Rect(10, 130, 120, 30), KickAllPlayers, "Kill all Players");
-            StartMatch = GUI.Toggle(new Rect(10, 150, 130, 30), StartMatch, "Inst Start Match (In lobby)");
             player_esp = GUI.Toggle(new Rect(10, 70, 120, 30), player_esp, "ESP");
             Hacks.LaunchHack();
         }
