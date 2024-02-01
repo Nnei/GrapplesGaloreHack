@@ -60,49 +60,7 @@ namespace Main
                     }
                 }
             }
-            //Inf AMMO (ONLY HOST)
-            if (ClientMain.InfAmmo)
-            {
-                
-            }
-            //Inf Health (ONLY HOST)
-            if (ClientMain.InfHealth)
-            {
-                foreach (GrapplingHook hook in GameObject.FindObjectsOfType<GrapplingHook>())
-                {
-                    if (hook == null)
-                        continue;
-                    MelonLogger.Msg(hook.player.tag);
-                    MelonLogger.Msg(hook.player.name);
-                    MelonLogger.Msg("----------------------");
-                }
-            }
-
-            if (ClientMain.KickAllPlayers)
-            {
-                foreach (CustomNetworkManager networkManager in GameObject.FindObjectsOfType<CustomNetworkManager>())
-                {
-                    if (networkManager != null & networkManager.gamePlayers != null)
-                    {
-                        AllPlayers = networkManager.gamePlayers;
-                        foreach (PlayerGameObjectController player in AllPlayers)
-                        {
-                            if (player == null) continue;
-                            if (player.playerName == "PedoBoy") continue;
-                            networkManager.KickPlayer(player.PlayerSteamID, player.ConnectionID);
-                        }
-                    }
-                }
-            }
-            if (ClientMain.StartMatch)
-            {
-                foreach (LobbyController controller in GameObject.FindObjectsOfType<LobbyController>())
-                {
-                    if (controller != null)
-                        controller.StartGame();
-                }
-            }
-
+            
         }
     }
 }
